@@ -249,3 +249,8 @@ a.it{text-decoration:none}
 .pgrid figure:nth-child(3n){margin-top:30px}
 .formmsg{margin:0;font-size:14px}
 @media (max-width:760px){.filmpage{padding:16px 16px 56px}.legal{padding:24px 20px 0}.por{padding:24px 20px 0}.pgrid{grid-template-columns:1fr 1fr;gap:12px}.pgrid figure:nth-child(n){margin-top:0}.pgrid figure:nth-child(2n){margin-top:40px}}
+
+.bookpill{position:fixed;right:24px;bottom:24px;z-index:20;font-family:'Instrument Sans',sans-serif;font-size:14px;color:#161514;background:#EAE5DC;border:1px solid #161514;border-radius:999px;padding:10px 18px;text-decoration:none;transition:opacity .3s}
+.bookpill:hover{background:#161514;color:#EAE5DC}
+.bookpill.gone{opacity:0;pointer-events:none}
+@media (max-width:700px){.bookpill{right:16px;bottom:16px;padding:9px 16px}}

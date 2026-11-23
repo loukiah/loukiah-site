@@ -154,3 +154,5 @@
     });
   });
 })();
+
+(function(){var p=document.querySelector("[data-bookpill]"),b=document.getElementById("book");if(!p||!b||!("IntersectionObserver" in window))return;new IntersectionObserver(function(e){p.classList.toggle("gone",e[0].isIntersecting)}).observe(b);})();
