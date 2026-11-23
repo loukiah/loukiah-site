@@ -53,17 +53,6 @@ content:
           - { name: text, label: Festival and award (for search engines), type: string }
           - { name: image, label: Laurel image, type: image }
 
-  - name: portraits
-    label: Portraits page
-    type: file
-    path: src/_data/portraits.json
-    format: json
-    fields:
-      - { name: heading, label: Heading, type: string }
-      - { name: intro, label: Intro, type: text }
-      - { name: german, label: German line, type: text }
-      - { name: form_note, label: Text above the form, type: text }
-      - { name: photos, label: Photos, type: image, list: true }
 
   - name: aboutpage
     label: About page
