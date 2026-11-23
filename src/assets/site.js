@@ -99,7 +99,7 @@
     }
     function close() {
       lb.hidden = true; frame.innerHTML = ""; document.body.style.overflow = "";
-      if (history.replaceState) history.replaceState(null, "", "/films/");
+      if (history.replaceState) history.replaceState(null, "", document.querySelector(".tabs").dataset.base);
       if (lastFocus) lastFocus.focus();
     }
     items.forEach((it) => it.addEventListener("click", (e) => {
