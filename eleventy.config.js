@@ -26,6 +26,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
   eleventyConfig.addPassthroughCopy({ "src/.nojekyll": ".nojekyll" });
 
+  eleventyConfig.addFilter("pre", withPrefix);
   eleventyConfig.addFilter("vimeo", vimeo);
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
   eleventyConfig.addFilter("pad", (n) => String(n).padStart(2, "0"));

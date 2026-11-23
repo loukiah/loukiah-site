@@ -4,7 +4,8 @@ cover: true
 title: "Loukia Hadjiyianni — Film director & portrait photographer in Berlin"
 ---
 <section class="cover film" aria-label="Showreel">
-<video class="vid" src="/media/films/showreel-loop.mp4" poster="/media/films/showreel-poster.jpg" autoplay muted loop playsinline></video>
+<video class="vid" id="reel" poster="/media/films/showreel-poster.jpg" autoplay muted loop playsinline preload="auto" data-sd="{{ '/media/films/showreel-loop.mp4' | pre }}" data-hd="{{ '/media/films/showreel-hd.mp4' | pre }}"></video>
+<script>(function(){var v=document.getElementById("reel"),c=navigator.connection,big=window.matchMedia("(min-width: 900px)").matches&&!(c&&c.saveData);v.src=big?v.dataset.hd:v.dataset.sd;})();</script>
 {% set light = true %}{% include "header.njk" %}
 <div class="cbot"><h1 class="role" style="margin:0;font-weight:400">Film director<br>Photographer<span class="sr"> in Berlin</span></h1></div>
 <a class="cover-link" href="/films/" aria-label="See the films"></a>
