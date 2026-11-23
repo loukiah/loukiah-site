@@ -1,0 +1,5 @@
+{
+  "layout": "film.njk",
+  "section": "films",
+  "permalink": "/films/{{ slug }}/"
+}

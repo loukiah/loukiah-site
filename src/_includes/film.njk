@@ -1,0 +1,20 @@
+---
+layout: base.njk
+eleventyComputed:
+  seoTitle: "{{ title }} — {{ type }} directed by Loukia Hadjiyianni, Berlin"
+  seoDescription: "{{ about if about else (title + ', ' + type + ' directed by Loukia Hadjiyianni, film director in Berlin.') }}"
+  ogImage: "{{ poster }}"
+---
+<main class="filmpage">
+<div class="lb-in">
+<a class="back" href="/films/">← All films</a>
+{% set first = parts[0].video if parts and parts.length else video %}
+<div class="lb-frame" data-frame>
+{% if first %}<button type="button" class="lb-play" data-embed="{{ first | vimeo }}" aria-label="Play {{ title }}">{% if poster %}<img src="{{ poster }}" alt="Still from {{ title }} by Loukia Hadjiyianni">{% endif %}<span>Play</span></button>
+{% elif loop %}<video src="{{ loop }}" poster="{{ poster }}" autoplay muted loop playsinline style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"></video>{% endif %}
+</div>
+<div class="lb-meta"><h1 class="c">{{ title }}</h1>{% if parts and parts.length %}<span class="lb-parts">{% for p in parts %}<button type="button" class="{% if loop.first %}pt-on{% endif %}" data-embed="{{ p.video | vimeo }}">{{ p.name }}</button>{% endfor %}</span>{% endif %}</div>
+<p class="lb-note">{{ type }}</p>
+<div class="lb-info"><p class="lb-about">{{ about }}</p><div class="lb-credits">{% for c in credits %}<p><span class="r">{{ c.role }}</span><span class="nm">{{ c.name }}</span></p>{% endfor %}{% if laurels and laurels.length %}<div class="lb-fest">{% for l in laurels %}<img src="{{ l.image }}" alt="{{ l.text }}" title="{{ l.text }}" loading="lazy">{% endfor %}</div>{% endif %}</div></div>
+</div>
+</main>

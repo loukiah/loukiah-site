@@ -1,0 +1,14 @@
+---
+layout: base.njk
+section: about
+permalink: /about/
+title: "About — Loukia Hadjiyianni, film director and photographer in Berlin"
+description: "Loukia Hadjiyianni is a Cypriot film director and photographer based in Berlin. Short films shown at festivals, music videos, commercials and portraits on film."
+---
+<section class="ab" aria-label="About">
+<div class="abody" style="width:329px;height:531px;grid-column:8 / span 5;grid-row:1">
+<h1 class="sr">About Loukia Hadjiyianni</h1>
+<div class="blk">{% for p in aboutpage.paragraphs %}<p>{{ p | safe }}</p>{% endfor %}</div>
+</div><figure class="pt" style="grid-column:4 / span 2;grid-row:1;width:141px;height:264px"><img src="/media/portrait.jpg" alt="Portrait of Loukia Hadjiyianni, film director and photographer in Berlin"></figure>
+</section>
+<section class="crow" aria-label="Clients"><span class="cl">Clients</span><ol>{% for c in clients.clients %}<li><span class="n">{{ loop.index | pad }}</span>{{ c }}</li>{% endfor %}</ol></section>

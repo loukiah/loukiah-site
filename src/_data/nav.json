@@ -1,0 +1,6 @@
+[
+  {"id": "films", "label": "Films", "url": "/films/"},
+  {"id": "photography", "label": "Photography", "url": "/photography/"},
+  {"id": "portraits", "label": "Portraits", "url": "/portraits/"},
+  {"id": "about", "label": "About", "url": "/about/"}
+]

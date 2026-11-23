@@ -1,0 +1,24 @@
+---
+layout: base.njk
+section: films
+permalink: /films/
+title: "Films — Loukia Hadjiyianni, film director in Berlin"
+description: "Short films, music videos and commercials directed by Loukia Hadjiyianni, film director based in Berlin. Half an Orange, Skin Hunger, On a Quiet Day, Ludmila’s Apple Pie and more."
+---
+<h1 class="sr">Films directed by Loukia Hadjiyianni</h1>
+<div class="tabs" role="group" aria-label="Filter"><button type="button" class="tab on" aria-pressed="true" data-cat="all">All</button><button type="button" class="tab" aria-pressed="false" data-cat="commercial">Commercial</button><button type="button" class="tab" aria-pressed="false" data-cat="narrative">Narrative</button></div>
+<section class="ed" aria-label="All films"><p class="stand side">Since I was a child,<br>I have used images to understand<br>myself and the world.<br><br>That same curiosity<br>still guides every project.</p>
+{% for f in collections.films %}<a href="{{ f.url }}" class="it s{{ loop.index0 % 13 }} m{{ loop.index0 % 3 }} on" data-i="{{ loop.index0 }}" data-cat="{{ f.data.category }}">
+<span class="fr film">{% if f.data.loop %}<video class="vid" src="{{ f.data.loop }}" poster="{{ f.data.poster }}" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>{% endif %}</span>
+<span class="cap"><span class="c">{{ f.data.title }}</span><span class="t">{{ f.data.type }}</span></span>
+</a>
+{% endfor %}</section>
+<div class="lb" role="dialog" aria-modal="true" hidden>
+<button class="lb-x" type="button" data-lb-close>Close</button>
+<div class="lb-in" data-lb-in>
+<div class="lb-frame" data-frame></div>
+<div class="lb-meta"><span class="c" data-lb-title></span><span class="lb-parts" data-lb-parts></span></div>
+<div class="lb-info"><p class="lb-about" data-lb-about></p><div class="lb-credits" data-lb-credits></div></div>
+</div>
+</div>
+<script id="film-data" type="application/json">{{ collections.films | filmData | safe }}</script>

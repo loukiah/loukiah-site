@@ -1,0 +1,9 @@
+<form class="bform" data-book method="POST" action="{{ site.formspree or ('mailto:' + site.email) }}">
+<label for="ps-mail-{{ formId or 'a' }}" class="sr">Your email</label>
+<input id="ps-mail-{{ formId or 'a' }}" class="fld" type="email" name="email" required placeholder="Your email" autocomplete="email">
+<input type="hidden" name="_subject" value="Portrait session enquiry (loukiah.com)">
+<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+<button type="submit" class="send">Request details</button>
+</form>
+<p class="formmsg" data-book-ok hidden>Thank you. You’ll hear from me shortly.</p>
+<p class="lb-note" style="color:#8A857D">Your email is only used to reply to you. <a href="/datenschutz/">Privacy</a></p>

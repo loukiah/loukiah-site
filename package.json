@@ -1,0 +1,14 @@
+{
+  "name": "loukiah-site",
+  "version": "1.0.0",
+  "description": "Website of Loukia Hadjiyianni, film director and photographer in Berlin",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.8"
+  },
+  "private": true,
+  "type": "module"
+}

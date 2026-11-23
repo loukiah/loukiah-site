@@ -1,0 +1,18 @@
+---
+layout: base.njk
+section: portraits
+permalink: /portraits/
+title: "Portrait photographer in Berlin — film portraits by Loukia Hadjiyianni"
+description: "Portrait photography in Berlin, shot on film. Studio and location portrait sessions with Loukia Hadjiyianni, photographer and film director. Porträtfotografin in Berlin."
+ogImage: "/media/photos/photo-23.jpg"
+---
+<main class="por">
+<h1>{{ portraits.heading }}</h1>
+<p class="intro">{{ portraits.intro }}</p>
+<p class="de" lang="de">{{ portraits.german }}</p>
+<div class="pgrid">{% for p in portraits.photos %}<figure><img src="{{ p }}" alt="Film portrait photographed in Berlin by Loukia Hadjiyianni" loading="lazy"></figure>{% endfor %}</div>
+<section class="book" style="margin:72px 0 0" aria-label="Book a portrait session"><h2>Book a session</h2><div>
+<p>{{ portraits.form_note }}</p>
+{% set formId = "p" %}{% include "bookform.njk" %}
+</div></section>
+</main>

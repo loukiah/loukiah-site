@@ -1,0 +1,33 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "{{ site.url }}/#person",
+      "name": "Loukia Hadjiyianni",
+      "jobTitle": ["Film director", "Photographer"],
+      "description": "{{ site.description }}",
+      "url": "{{ site.url }}/",
+      "email": "mailto:{{ site.email }}",
+      "image": "{{ site.url }}/media/portrait.jpg",
+      "homeLocation": {"@type": "Place", "name": "Berlin, Germany"},
+      "address": {"@type": "PostalAddress", "addressLocality": "Berlin", "addressCountry": "DE"},
+      "knowsAbout": ["Film directing", "Short films", "Music videos", "Commercials", "Portrait photography", "Film photography"],
+      "sameAs": ["{{ site.instagram }}", "{{ site.vimeo }}", "{{ site.linkedin }}"]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "{{ site.url }}/#business",
+      "name": "Loukia Hadjiyianni – Film director & portrait photographer",
+      "url": "{{ site.url }}/",
+      "email": "{{ site.email }}",
+      "image": "{{ site.url }}/media/brand/share.jpg",
+      "founder": {"@id": "{{ site.url }}/#person"},
+      "address": {"@type": "PostalAddress", "addressLocality": "Berlin", "addressCountry": "DE"},
+      "areaServed": [{"@type": "City", "name": "Berlin"}, {"@type": "Country", "name": "Germany"}, {"@type": "Country", "name": "Cyprus"}],
+      "serviceType": ["Portrait photography", "Film directing", "Music video directing", "Commercial directing"]
+    }
+  ]
+}
+</script>

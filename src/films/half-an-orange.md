@@ -1,0 +1,43 @@
+---
+title: "Half an Orange"
+slug: half-an-orange
+type: "short film"
+category: narrative
+order: 5
+published: true
+loop: "/media/films/orange-loop.mp4"
+poster: "/media/films/orange-poster.jpg"
+video: "https://vimeo.com/1169944184"
+parts:
+  - name: "Trailer"
+    video: "https://vimeo.com/981674438"
+  - name: "Making of"
+    video: "https://vimeo.com/1169944184"
+about: "One summer on a farm in Cyprus, Valeria, a reclusive young writer, meets the free-spirited Antigone at a party. Between the fields and the sea, the two grow close, and Valeria finds something new to write about."
+credits:
+  - role: "Written, directed and produced by"
+    name: "Loukia Hadjiyianni"
+  - role: "Producer"
+    name: "Andros Achilleos"
+  - role: "Cast"
+    name: "Melissa Zanga, Thekla Flouri"
+  - role: "Distribution"
+    name: "NQV Media"
+laurels:
+  - text: "Best International Short Film, Santorini Film Festival 2025"
+    image: "/media/laurels/orange-0.png"
+  - text: "Best Drama, Copenhagen Film Festival 2025"
+    image: "/media/laurels/orange-1.png"
+  - text: "Best LGBTQ Short, Venice Shorts 2024"
+    image: "/media/laurels/orange-2.png"
+  - text: "World Premiere, LesGaiCineMad Madrid 2024"
+    image: "/media/laurels/orange-3.png"
+  - text: "Official Selection, Independent Days Karlsruhe 2025"
+    image: "/media/laurels/orange-4.png"
+  - text: "Official Selection, Oslo/Fusion 2025"
+    image: "/media/laurels/orange-5.png"
+  - text: "Official Selection, Let’s Start the Revolution Lublin 2025"
+    image: "/media/laurels/orange-6.png"
+  - text: "Official Selection, ISFF Cyprus Limassol 2025"
+    image: "/media/laurels/orange-7.png"
+---

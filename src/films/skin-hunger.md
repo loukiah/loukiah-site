@@ -1,0 +1,46 @@
+---
+title: "Skin Hunger"
+slug: skin-hunger
+type: "short film"
+category: narrative
+order: 10
+published: true
+loop: "/media/films/skin-loop.mp4"
+poster: "/media/films/skin-poster.jpg"
+video: "https://vimeo.com/1248509770"
+about: "Ayden, suffering from touch deprivation, once again retreats to memories of Cleo. But this time, instead of being paralyzed by the past, she transforms it into something new."
+credits:
+  - role: "Directed by"
+    name: "Loukia Hadjiyianni"
+  - role: "Written and produced by"
+    name: "Kayu Yeung"
+  - role: "Cast"
+    name: "Virginia Kaminsky, Yumi Kuwabara"
+  - role: "Director of photography"
+    name: "Kateryna Bilaya"
+  - role: "2nd assistant director"
+    name: "Konstantina Tezapsidou"
+  - role: "1st assistant camera"
+    name: "Tessa Matteus"
+  - role: "Gaffer"
+    name: "Lillie Auvray"
+  - role: "Electrician"
+    name: "Renzo Mercarini"
+  - role: "Sound"
+    name: "Sylvie Weiss"
+  - role: "Set design and makeup"
+    name: "Aurora On Kiu Hui"
+  - role: "Edit and colour"
+    name: "Loukia Hadjiyianni"
+  - role: "VFX"
+    name: "Valentino Rentz, Robin Häberer"
+  - role: "Produced at"
+    name: "filmArche"
+laurels:
+  - text: "World Premiere, New Talents, Weimar Poetry Film Award 2025"
+    image: "/media/laurels/skin-0.png"
+  - text: "Official Selection, Queer Wave Nicosia 2025"
+    image: "/media/laurels/skin-1.png"
+  - text: "DACH Short Film Competition, Future Storytellers Munich 2025"
+    image: "/media/laurels/skin-2.png"
+---
