@@ -1,5 +1,5 @@
 <nav class="mmenu" aria-label="Menu" hidden>
 <div style="display:flex;justify-content:space-between;align-items:center"><span class="name">Loukia Hadjiyianni</span><button type="button" class="mclose" data-menu-close>Close</button></div>
-<div class="links"><a href="/"><i>01</i>Home</a>{% for n in nav %}<a href="{{ n.url }}"><i>0{{ loop.index + 1 }}</i>{{ n.label }}</a>{% endfor %}</div>
+<div class="links"><a href="/"><i>01</i>Home</a>{% for n in nav %}<a href="{{ n.url }}"><i>0{{ loop.index + 1 }}</i>{{ n.label }}</a>{% endfor %}<a href="/contact/"><i>0{{ nav.length + 2 }}</i>Contact</a></div>
 <div style="display:flex;flex-direction:column;gap:10px;font-size:14px"><a href="mailto:{{ site.email }}" style="font-size:26px;text-decoration:none">{{ site.email }}</a><span style="display:flex;gap:20px"><a href="{{ site.instagram }}">Instagram</a><a href="{{ site.vimeo }}">Vimeo</a><a href="{{ site.linkedin }}">LinkedIn</a></span></div>
 </nav>

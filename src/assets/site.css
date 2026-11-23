@@ -81,7 +81,7 @@ a{color:#161514}
 .lb-fest{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center}
 .lb-fest img{height:58px;width:auto;opacity:.8;display:block}
 .lb-x{position:fixed;top:22px;right:40px;background:none;border:0;min-height:44px;font:inherit;font-size:14px;color:#fff;cursor:pointer}
-.book{margin:96px 40px 0;padding:0;display:flex;flex-wrap:wrap;gap:12px 32px;align-items:baseline}
+.book{margin:48px 40px 0;padding:0;display:flex;flex-wrap:wrap;gap:12px 32px;align-items:baseline}
 .book h2{margin:0;font-family:'Instrument Sans',sans-serif;font-weight:400;font-size:14px}
 .book p{margin:0;font-size:14px;color:#6E6A63}
 .book .fld{font-size:14px;padding:6px 0}
@@ -178,7 +178,7 @@ P.s0{grid-column:1 / span 7;margin-top:0px}.s0 .fr{aspect-ratio:16 / 9}.s1{grid-
 .lb-meta .c{font-size:21px}
 .lb-info{grid-template-columns:1fr;gap:36px}
 .lb-about{font-size:18px}
-.book{margin:64px 20px 0;flex-direction:column;gap:10px}
+.book{margin:40px 20px 0;flex-direction:column;gap:10px}
 .ab{grid-template-columns:1fr;padding:24px 20px}
 .ab .pt{grid-column:1;grid-row:auto;width:140px;margin:0 0 24px auto}
 .abody{grid-row:auto}
@@ -254,3 +254,10 @@ a.it{text-decoration:none}
 .bookpill:hover{background:#161514;color:#EAE5DC}
 .bookpill.gone{opacity:0;pointer-events:none}
 @media (max-width:700px){.bookpill{right:16px;bottom:16px;padding:9px 16px}}
+
+.ct{min-height:calc(100vh - 260px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:18px;padding:40px 20px;font-family:'Instrument Sans',sans-serif}
+.ct-h{margin:0;font-weight:400;font-size:14px;color:#6E6A63;letter-spacing:.01em}
+.ct-mail{font-size:clamp(30px,5vw,64px);line-height:1.05;text-decoration:none;color:#161514}
+.ct-mail:hover{text-decoration:underline;text-underline-offset:8px}
+.ct-p{margin:0;font-size:15px;line-height:1.5;color:#3A3733}
+.ct-soc{margin:8px 0 0;display:flex;gap:24px;font-size:14px}
