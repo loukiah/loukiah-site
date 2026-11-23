@@ -260,7 +260,10 @@ a.it{text-decoration:none}
 .ct-mail{font-size:clamp(30px,5vw,64px);line-height:1.05;text-decoration:none;color:#161514}
 .ct-mail:hover{text-decoration:underline;text-underline-offset:8px}
 .ct-p{margin:0;font-size:15px;line-height:1.5;color:#3A3733}
-.ct-soc{margin:8px 0 0;display:flex;gap:24px;font-size:14px}
+.ct-in{display:inline-flex;flex-direction:column;align-items:stretch;gap:22px}
+.ct-soc{margin:0;display:flex;justify-content:space-between;gap:24px;font-size:14px}
+.ct-soc a{text-decoration:none}
+.ct-soc a:hover{text-decoration:underline;text-underline-offset:4px}
 a.ext{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 a.ext:hover{text-decoration-thickness:2px}
 .contactpg .ftop{display:none}
