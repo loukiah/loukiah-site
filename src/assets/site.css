@@ -261,3 +261,6 @@ a.it{text-decoration:none}
 .ct-mail:hover{text-decoration:underline;text-underline-offset:8px}
 .ct-p{margin:0;font-size:15px;line-height:1.5;color:#3A3733}
 .ct-soc{margin:8px 0 0;display:flex;gap:24px;font-size:14px}
+a.ext{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+a.ext:hover{text-decoration-thickness:2px}
+.contactpg .ftop{display:none}

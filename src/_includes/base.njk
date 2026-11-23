@@ -16,16 +16,16 @@
 <meta property="og:image" content="{{ site.url }}{{ ogImage or '/media/brand/share.jpg' }}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/assets/fonts/instrument-sans-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site.css?v={{ build }}">
 {% include "schema.njk" %}
 </head>
-<body>
+<body{% if section == "contact" %} class="contactpg"{% endif %}>
 <div class="wrap">
 {% if not cover %}{% include "header.njk" %}{% endif %}
 {{ content | safe }}
 {% if not cover %}{% include "footer.njk" %}{% endif %}
 {% include "menu.njk" %}
 </div>
-<script src="/assets/site.js" defer></script>
+<script src="/assets/site.js?v={{ build }}" defer></script>
 </body>
 </html>
