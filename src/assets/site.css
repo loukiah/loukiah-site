@@ -281,14 +281,14 @@ video::-webkit-media-controls-start-playback-button{display:none!important;-webk
 video::-webkit-media-controls{display:none!important}
 video[autoplay]{opacity:0;transition:opacity .4s ease}video[autoplay].on{opacity:1}
 .mmenu{position:fixed;inset:0;z-index:200}
-.mdim{position:absolute;inset:0;background:rgba(10,10,10,.12);opacity:0;transition:opacity .35s ease}
-.mpanel{position:absolute;top:0;right:0;width:min(60vw,230px);padding:70px 24px 26px;background:#161514;color:#fff;border-bottom-left-radius:14px;transform:translateY(-100%);transition:transform .42s cubic-bezier(.2,.8,.2,1)}
-.mmenu.open .mdim{opacity:1}.mmenu.open .mpanel{transform:none}
-.mmenu .links{display:flex;flex-direction:column;gap:6px}
-.mmenu .links a{font-family:'Instrument Sans',sans-serif;font-size:24px;line-height:1.15;text-decoration:none;color:#fff;opacity:0;transform:translateY(-8px);transition:opacity .35s ease,transform .45s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--d) * 45ms + 60ms)}
+.mpanel{position:absolute;inset:0;padding:24px 24px 32px;background:#EAE5DC;color:#161514;display:flex;flex-direction:column;justify-content:center;opacity:0;transition:opacity .3s ease}
+.mmenu.open .mpanel{opacity:1}
+.mpanel .name{position:absolute;top:24px;left:24px;color:#161514;text-decoration:none}
+.mmenu .links{display:flex;flex-direction:column;gap:4px}
+.mmenu .links a{font-family:'Instrument Sans',sans-serif;font-size:44px;line-height:1.1;text-decoration:none;color:#161514;opacity:0;transform:translateY(12px);transition:opacity .35s ease,transform .45s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--d) * 45ms + 60ms)}
 .mmenu.open .links a{opacity:1;transform:none}
-.mclose{position:absolute;top:16px;right:16px;width:44px;height:44px;border:0;background:none;padding:0;cursor:pointer;color:#fff;display:flex;align-items:center;justify-content:flex-end}
+.mclose{position:absolute;top:16px;right:16px;width:44px;height:44px;border:0;background:none;padding:0;cursor:pointer;color:#161514;display:flex;align-items:center;justify-content:flex-end}
 .mclose i{position:relative;display:block;width:22px;height:14px}
 .mclose i:before,.mclose i:after{content:"";position:absolute;left:0;top:6px;width:22px;height:1.5px;background:currentColor;transform:rotate(45deg)}
 .mclose i:after{transform:rotate(-45deg)}
-@media (prefers-reduced-motion:reduce){.mpanel,.mdim,.mmenu .links a{transition:none}}
+@media (prefers-reduced-motion:reduce){.mpanel,.mmenu .links a{transition:none}}

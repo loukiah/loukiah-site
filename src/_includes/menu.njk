@@ -1,6 +1,6 @@
 <div class="mmenu" hidden>
-<div class="mdim" data-menu-close></div>
 <nav class="mpanel" aria-label="Menu">
+<a class="name" href="/">Loukia Hadjiyianni</a>
 <button type="button" class="mclose" data-menu-close aria-label="Close menu"><i></i></button>
 <div class="links">{% for n in nav %}<a href="{{ n.url }}" style="--d:{{ loop.index }}">{{ n.label }}</a>{% endfor %}<a href="/contact/" style="--d:{{ nav.length + 1 }}">Contact</a></div>
 </nav>
