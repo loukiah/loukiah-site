@@ -8,9 +8,12 @@
 
   // ---- mobile menu
   const menu = $(".mmenu");
-  $$("[data-menu-open]").forEach((b) => b.addEventListener("click", () => { menu.hidden = false; }));
-  $$("[data-menu-close]").forEach((b) => b.addEventListener("click", () => { menu.hidden = true; }));
-  if (menu) $$("a", menu).forEach((a) => a.addEventListener("click", () => { menu.hidden = true; }));
+  const openMenu = () => { menu.hidden = false; requestAnimationFrame(() => requestAnimationFrame(() => menu.classList.add("open"))); };
+  const closeMenu = () => { menu.classList.remove("open"); setTimeout(() => { if (!menu.classList.contains("open")) menu.hidden = true; }, 450); };
+  $$("[data-menu-open]").forEach((b) => b.addEventListener("click", openMenu));
+  $$("[data-menu-close]").forEach((b) => b.addEventListener("click", closeMenu));
+  if (menu) $$("a", menu).forEach((a) => a.addEventListener("click", closeMenu));
+  addEventListener("keydown", (e) => { if (e.key === "Escape" && menu && !menu.hidden) closeMenu(); });
 
   // ---- background videos: start them, pause when off screen
   const vids = $$("video.vid");
