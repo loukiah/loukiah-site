@@ -15,6 +15,7 @@ eleventyComputed:
 </div>
 <div class="lb-meta"><h1 class="c">{{ title }}</h1>{% if parts and parts.length %}<span class="lb-parts">{% for p in parts %}<button type="button" class="{% if loop.first %}pt-on{% endif %}" data-embed="{{ p.video | vimeo }}">{{ p.name }}</button>{% endfor %}</span>{% endif %}</div>
 <p class="lb-note">{{ type }}</p>
-<div class="lb-info"><p class="lb-about">{{ about }}</p><div class="lb-credits">{% for c in credits %}<p><span class="r">{{ c.role }}</span><span class="nm">{{ c.name }}</span></p>{% endfor %}{% if laurels and laurels.length %}<div class="lb-fest">{% for l in laurels %}<img src="{{ l.image }}" alt="{{ l.text }}" title="{{ l.text }}" loading="lazy">{% endfor %}</div>{% endif %}</div></div>
+{% if laurels and laurels.length %}<div class="lb-fest">{% for l in laurels %}<img src="{{ l.image }}" alt="{{ l.text }}" title="{{ l.text }}" loading="lazy">{% endfor %}</div>{% endif %}
+<div class="lb-info"><p class="lb-about">{{ about }}</p><div class="lb-credits">{% for c in credits %}<p><span class="r">{{ c.role }}</span><span class="nm">{{ c.name }}</span></p>{% endfor %}</div></div>
 </div>
 </main>

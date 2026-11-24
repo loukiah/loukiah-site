@@ -267,3 +267,6 @@ a.it{text-decoration:none}
 a.ext{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 a.ext:hover{text-decoration-thickness:2px}
 .contactpg .ftop{display:none}
+
+.lb-fest{margin:16px 0 6px}
+.lb-fest:empty{display:none}

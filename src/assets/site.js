@@ -87,8 +87,8 @@
         render();
       }));
       $("[data-lb-about]", lb).textContent = f.about || "";
-      $("[data-lb-credits]", lb).innerHTML = (f.credits || []).map((c) => '<p><span class="r">' + esc(c.r) + '</span><span class="nm">' + esc(c.n) + "</span></p>").join("") +
-        (f.laurels && f.laurels.length ? '<div class="lb-fest">' + f.laurels.map((l) => '<img src="' + esc(l.img) + '" alt="' + esc(l.t) + '" title="' + esc(l.t) + '">').join("") + "</div>" : "");
+      $("[data-lb-credits]", lb).innerHTML = (f.credits || []).map((c) => '<p><span class="r">' + esc(c.r) + '</span><span class="nm">' + esc(c.n) + "</span></p>").join("");
+      $("[data-lb-fest]", lb).innerHTML = (f.laurels || []).map((l) => '<img src="' + esc(l.img) + '" alt="' + esc(l.t) + '" title="' + esc(l.t) + '">').join("");
       lb.setAttribute("aria-label", f.c);
     }
     function open(i) {
