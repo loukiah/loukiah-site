@@ -9,6 +9,9 @@ loop: "/media/films/cake-loop.mp4"
 poster: "/media/films/cake-poster.jpg"
 video: "https://vimeo.com/1174420855"
 about: "Campaign film for the launch of a new backing track player."
+client:
+  name: "A Piece of Cake"
+  url: "https://apieceofcake.live/"
 credits:
   - role: "Creative director"
     name: "Loukia Hadjiyianni"
