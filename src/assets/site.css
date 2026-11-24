@@ -281,13 +281,13 @@ video::-webkit-media-controls-start-playback-button{display:none!important;-webk
 video::-webkit-media-controls{display:none!important}
 video[autoplay]{opacity:0;transition:opacity .4s ease}video[autoplay].on{opacity:1}
 .mmenu{position:fixed;inset:0;z-index:200}
-.mpanel{position:absolute;inset:0;padding:24px 24px 32px;background:#EAE5DC;color:#161514;display:flex;flex-direction:column;justify-content:center;opacity:0;transition:opacity .3s ease}
+.mpanel{position:absolute;inset:0;padding:24px 20px 32px;background:#EAE5DC;color:#161514;display:flex;flex-direction:column;justify-content:center;opacity:0;transition:opacity .3s ease}
 .mmenu.open .mpanel{opacity:1}
-.mpanel .name{position:absolute;top:24px;left:24px;color:#161514;text-decoration:none}
+.mpanel .name{position:absolute;top:28px;left:20px;color:#161514;text-decoration:none}
 .mmenu .links{display:flex;flex-direction:column;gap:4px}
 .mmenu .links a{font-family:'Instrument Sans',sans-serif;font-size:44px;line-height:1.1;text-decoration:none;color:#161514;opacity:0;transform:translateY(12px);transition:opacity .35s ease,transform .45s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--d) * 45ms + 60ms)}
 .mmenu.open .links a{opacity:1;transform:none}
-.mclose{position:absolute;top:16px;right:16px;width:44px;height:44px;border:0;background:none;padding:0;cursor:pointer;color:#161514;display:flex;align-items:center;justify-content:flex-end}
+.mclose{position:absolute;top:16px;right:20px;width:44px;height:44px;border:0;background:none;padding:0;cursor:pointer;color:#161514;display:flex;align-items:center;justify-content:flex-end}
 .mclose i{position:relative;display:block;width:22px;height:14px}
 .mclose i:before,.mclose i:after{content:"";position:absolute;left:0;top:6px;width:22px;height:1.5px;background:currentColor;transform:rotate(45deg)}
 .mclose i:after{transform:rotate(-45deg)}
