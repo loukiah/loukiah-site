@@ -276,7 +276,6 @@ a.ext:hover{text-decoration-thickness:2px}
 .lb{padding-left:104px;padding-right:104px}
 @media (max-width:900px){.lb{padding-left:12px;padding-right:12px}.lb-prev{left:10px}.lb-next{right:10px}.lb-nav{width:44px;height:44px}.lb-nav span{font-size:20px}}
 
-@media (max-width:760px){.ed>a.it{order:2}.ed>a.it:nth-of-type(-n+2){order:0}.stand.side{order:1;margin:0 0 8px}}
 video::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none}
 video::-webkit-media-controls{display:none!important}
 video[autoplay]{opacity:0;transition:opacity .4s ease}video[autoplay].on{opacity:1}
