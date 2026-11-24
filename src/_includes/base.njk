@@ -20,6 +20,7 @@
 <link rel="preload" href="/assets/fonts/instrument-sans-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css?v={{ build }}">
 {% include "schema.njk" %}
+<script>document.addEventListener("playing",function(e){if(e.target.tagName==="VIDEO")e.target.classList.add("on")},true)</script>
 </head>
 <body{% if section == "contact" %} class="contactpg"{% endif %}>
 <div class="wrap">

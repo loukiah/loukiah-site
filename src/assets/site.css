@@ -284,3 +284,4 @@ a.ext:hover{text-decoration-thickness:2px}
 @media (max-width:760px){.ed>a.it{order:2}.ed>a.it:nth-of-type(-n+2){order:0}.stand.side{order:1;margin:0 0 8px}}
 video::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none}
 video::-webkit-media-controls{display:none!important}
+video[autoplay]{opacity:0;transition:opacity .4s ease}video[autoplay].on{opacity:1}

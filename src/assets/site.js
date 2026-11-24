@@ -15,6 +15,9 @@
   // ---- background videos: start them, pause when off screen
   const vids = $$("video.vid");
   vids.forEach(play);
+  // iOS Low Power Mode blocks autoplay until the first touch: start whatever is on screen then
+  const kick = () => $$("video[autoplay]").forEach((v) => { const r = v.getBoundingClientRect(); if (r.bottom > 0 && r.top < innerHeight) play(v); });
+  ["touchstart", "pointerdown", "scroll"].forEach((e) => addEventListener(e, kick, { once: true, passive: true }));
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver((es) => es.forEach((e) => {
       const it = e.target.closest(".it");
@@ -75,7 +78,7 @@
       const p = parts.length ? parts[((pv % parts.length) + parts.length) % parts.length] : null;
       const src = p ? p.embed : f.embed;
       if (src) startEmbed(frame, src, f.c + (p ? " — " + p.n : ""));
-      else frame.innerHTML = f.loop ? '<video src="' + esc(f.loop) + '" poster="' + esc(f.poster) + '" autoplay muted loop playsinline style="object-fit:cover"></video>' : "";
+      else frame.innerHTML = f.loop ? '<img src="' + esc(f.poster) + '" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"><video src="' + esc(f.loop) + '" autoplay muted loop playsinline style="object-fit:cover"></video>' : "";
       $("[data-lb-title]", lb).textContent = f.c;
       const pe = $("[data-lb-parts]", lb);
       pe.innerHTML = parts.length ? '<button type="button" class="pv-a" data-d="-1" aria-label="Previous video">←</button>' +
