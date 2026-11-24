@@ -123,7 +123,7 @@
     document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !lb.hidden) close(); });
   }
 
-  // ---- photography: series viewer (groups of 4)
+  // ---- photography: viewer (steps through every photo; series grouping later)
   const sv = $(".sv");
   if (sv) {
     const urls = {};
@@ -136,8 +136,7 @@
       $("[data-sv-count]", sv).textContent = (si + 1) + " / " + ser.length;
     };
     $$(".fp[data-i]").forEach((b) => b.addEventListener("click", () => {
-      const i = +b.dataset.i, s = Math.floor(i / 4);
-      ser = all.slice(s * 4, s * 4 + 4); si = i % 4; lastFocus = b;
+      ser = all; si = Math.max(0, all.indexOf(urls[b.dataset.i])); lastFocus = b;
       show(); sv.hidden = false; document.body.style.overflow = "hidden";
     }));
     const close = () => { sv.hidden = true; document.body.style.overflow = ""; if (lastFocus) lastFocus.focus(); };
