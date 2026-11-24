@@ -12,6 +12,12 @@ about: ""
 credits:
   - role: "Director"
     name: "Loukia Hadjiyianni"
+  - role: "Camera & editing"
+    name: "Loukia Hadjiyianni"
+  - role: "Sound mixing"
+    name: "George Theodoulou"
+  - role: "Subtitles"
+    name: "Levan Nadibaidze"
 laurels:
   - text: "Official Selection, BEAST International Film Festival 2025"
     image: "/media/laurels/ludmila-0.png"
