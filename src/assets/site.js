@@ -87,7 +87,7 @@
         render();
       }));
       $("[data-lb-about]", lb).textContent = f.about || "";
-      $("[data-lb-credits]", lb).innerHTML = (f.credits || []).map((c) => '<p><span class="r">' + esc(c.r) + '</span><span class="nm">' + esc(c.n) + "</span></p>").join("");
+      $("[data-lb-credits]", lb).innerHTML = (f.client ? '<p class="cl"><span class="r">Client</span><span class="nm">' + (f.client.u ? '<a class="ext" href="' + esc(f.client.u) + '" target="_blank" rel="noopener">' + esc(f.client.n) + "</a>" : esc(f.client.n)) + "</span></p>" : "") + (f.credits || []).map((c) => '<p><span class="r">' + esc(c.r) + '</span><span class="nm">' + esc(c.n) + "</span></p>").join("");
       $("[data-lb-fest]", lb).innerHTML = (f.laurels || []).map((l) => '<img src="' + esc(l.img) + '" alt="' + esc(l.t) + '" title="' + esc(l.t) + '">').join("");
       lb.setAttribute("aria-label", f.c);
     }
@@ -106,6 +106,18 @@
       if (e.metaKey || e.ctrlKey || e.shiftKey) return; // let people open the film page in a new tab
       e.preventDefault(); open(+it.dataset.i);
     }));
+    function step(d) {
+      const vis = items.filter((it) => !it.classList.contains("off")).map((it) => +it.dataset.i);
+      let k = vis.indexOf(cur); if (k < 0) k = 0;
+      cur = vis[(k + d + vis.length) % vis.length]; pv = 0; render();
+      if (history.replaceState) history.replaceState(null, "", films[cur].url);
+    }
+    $$("[data-lb-nav]", lb).forEach((b) => b.addEventListener("click", (e) => { e.stopPropagation(); step(+b.dataset.lbNav); }));
+    document.addEventListener("keydown", (e) => {
+      if (lb.hidden) return;
+      if (e.key === "ArrowRight") step(1);
+      if (e.key === "ArrowLeft") step(-1);
+    });
     $("[data-lb-close]").addEventListener("click", close);
     lb.addEventListener("click", (e) => { if (!e.target.closest("[data-lb-in]")) close(); });
     document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !lb.hidden) close(); });

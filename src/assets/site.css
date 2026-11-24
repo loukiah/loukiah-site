@@ -270,3 +270,13 @@ a.ext:hover{text-decoration-thickness:2px}
 
 .lb-fest{margin:16px 0 6px}
 .lb-fest:empty{display:none}
+
+.lb-nav{position:fixed;top:0;bottom:0;z-index:2;width:72px;display:flex;align-items:center;justify-content:center;background:none;border:0;padding:0;cursor:pointer;color:#e2ddd3}
+.lb-nav span{font-family:'Instrument Sans',sans-serif;font-size:34px;line-height:1;opacity:.55;transition:opacity .2s,transform .2s}
+.lb-nav:hover span{opacity:1}
+.lb-prev{left:0}.lb-prev:hover span{transform:translateX(-4px)}
+.lb-next{right:0}.lb-next:hover span{transform:translateX(4px)}
+.lb{padding-left:84px;padding-right:84px}
+.lb-credits .cl .nm a{color:inherit}
+@media (max-width:700px){.lb{padding-left:12px;padding-right:12px}.lb-nav{top:auto;bottom:16px;height:48px;width:48px;border-radius:50%;background:rgba(30,29,27,.85)}.lb-nav span{font-size:22px;opacity:.9}.lb-prev{left:16px}.lb-next{right:16px}}
+.lb-x{z-index:3}

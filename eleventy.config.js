@@ -39,6 +39,7 @@ export default function (eleventyConfig) {
         return {
           c: d.title, t: d.type, url: withPrefix(f.url), loop: withPrefix(d.loop || ""), poster: withPrefix(d.poster || ""),
           embed: vimeo(d.video), parts, about: d.about || "",
+          client: d.client ? { n: d.client.name, u: d.client.url || "" } : null,
           credits: (d.credits || []).map((c) => ({ r: c.role, n: c.name })),
           laurels: (d.laurels || []).map((l) => ({ t: l.text, img: withPrefix(l.image) })),
         };
