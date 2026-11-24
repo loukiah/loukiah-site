@@ -29,7 +29,7 @@ jobs:
       - run: npm run build
         env:
           # "/loukiah-site/" while previewing at loukiah.github.io; "/" once loukiah.com points here
-          PATH_PREFIX: "/loukiah-site/"
+          PATH_PREFIX: "/"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
