@@ -11,6 +11,7 @@ video: "https://vimeo.com/1133608142"
 about: "An intimate journey through the German island of Sylt, for Mimosa Collection."
 client:
   name: "Mimosa Collection"
+  url: "https://mimosacollection.com/"
 credits:
   - role: "Director"
     name: "Loukia Hadjiyianni"
