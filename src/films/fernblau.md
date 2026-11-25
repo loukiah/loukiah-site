@@ -4,7 +4,8 @@ slug: fernblau
 type: "short film, 2026"
 category: narrative
 order: 12
-published: true
+published: false
+permalink: false
 loop: "/media/films/fern-loop.mp4"
 poster: "/media/films/fern-poster.jpg"
 video: ""
