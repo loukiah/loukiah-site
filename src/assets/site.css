@@ -291,3 +291,5 @@ video[autoplay]{opacity:0;transition:opacity .4s ease}video[autoplay].on{opacity
 .mclose i:before,.mclose i:after{content:"";position:absolute;left:0;top:6px;width:22px;height:1.5px;background:currentColor;transform:rotate(45deg)}
 .mclose i:after{transform:rotate(-45deg)}
 @media (prefers-reduced-motion:reduce){.mpanel,.mmenu .links a{transition:none}}
+video::-webkit-media-controls-overlay-play-button{display:none!important;-webkit-appearance:none}
+video::-webkit-media-controls-panel{display:none!important}
