@@ -20,6 +20,7 @@
 <link rel="preload" href="/assets/fonts/instrument-sans-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site.css?v={{ build }}">
 {% include "schema.njk" %}
+<script>window.vfb=function(v){try{if(!/^((?!chrome|chromium|android|crios|fxios|edg).)*safari/i.test(navigator.userAgent))return;var im=v.previousElementSibling;if(im&&im.tagName==="PICTURE")im=im.querySelector("img");if(!im||im.tagName!=="IMG"||im.dataset.fb)return;var tall=matchMedia("(orientation: portrait) and (max-width: 900px)").matches;var s=(tall&&v.dataset.v)||v.dataset.sd||v.getAttribute("src")||v.currentSrc;if(!s)return;im.dataset.fb="1";if(im.parentElement.tagName==="PICTURE")[].slice.call(im.parentElement.querySelectorAll("source")).forEach(function(x){x.remove()});im.src=s;}catch(e){}};</script>
 <script>document.addEventListener("timeupdate",function(e){var v=e.target;if(v.tagName==="VIDEO"&&!v.paused&&v.currentTime>0.05)v.classList.add("on")},true);document.addEventListener("pause",function(e){if(e.target.tagName==="VIDEO")e.target.classList.remove("on")},true)</script>
 </head>
 <body{% if section == "contact" %} class="contactpg"{% endif %}>

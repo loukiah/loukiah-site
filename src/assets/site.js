@@ -3,7 +3,7 @@
 (function () {
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
-  const play = (v) => { if (!v) return; v.muted = true; const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+  const play = (v) => { if (!v) return; v.muted = true; const p = v.play(); if (p && p.catch) p.catch((e) => { if (e && e.name === "NotAllowedError" && window.vfb) window.vfb(v); }); };
   const esc = (s) => String(s || "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
   // ---- mobile menu
